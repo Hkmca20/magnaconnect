@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/tool_com" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/receiptContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="@dimen/size_margin100"
+            android:layout_height="@dimen/size_margin100"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_margin20"
+            android:scaleType="fitXY"
+            android:src="@drawable/bt_plus_1080"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoIV">
+
+            <LinearLayout
+                android:id="@+id/recyclerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/White"
+                    card_view:cardElevation="@dimen/size_margin1"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dotted_border_layout"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iconIV"
+                            android:layout_width="@dimen/size_margin60"
+                            android:layout_height="@dimen/size_margin60"
+                            android:layout_centerHorizontal="true"
+                            android:padding="4dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_lockscreen_glowdot"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:padding="@dimen/size_margin10"
+                                android:text="Order Taken"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/size_tv16"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/titleTV"
+                                android:padding="4dp"
+                                android:textColor="@color/Ash_Gray"
+                                android:textSize="@dimen/size_tv_vsmall"
+                                android:visibility="gone"
+                                tools:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/productCountTV"
+                                android:layout_width="@dimen/size_margin50"
+                                android:layout_height="@dimen/size_margin50"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/size_margin20"
+                                android:background="@drawable/circle_bg"
+                                android:gravity="center"
+                                android:padding="@dimen/size_margin10"
+                                android:text="22"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/size_tv20"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/titleTV"
+                                android:padding="4dp"
+                                android:textColor="@color/Ash_Gray"
+                                android:textSize="@dimen/size_tv_vsmall"
+                                android:visibility="gone"
+                                tools:text="--" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/White"
+                    card_view:cardElevation="@dimen/size_margin1"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dotted_border_layout"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_margin60"
+                            android:layout_height="@dimen/size_margin60"
+                            android:layout_centerHorizontal="true"
+                            android:padding="4dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_lockscreen_glowdot"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:padding="@dimen/size_margin10"
+                                android:text="Counter Receipt Taken"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/size_tv_medium"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/titleTV"
+                                android:padding="4dp"
+                                android:textColor="@color/Ash_Gray"
+                                android:textSize="@dimen/size_tv_vsmall"
+                                android:visibility="gone"
+                                tools:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/counterCountTV"
+                                android:layout_width="@dimen/size_margin50"
+                                android:layout_height="@dimen/size_margin50"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/size_margin20"
+                                android:background="@drawable/circle_bg"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/size_tv20"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/titleTV"
+                                android:padding="4dp"
+                                android:textColor="@color/Ash_Gray"
+                                android:textSize="@dimen/size_tv_vsmall"
+                                android:visibility="gone"
+                                tools:text="--" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/White"
+                    card_view:cardElevation="@dimen/size_margin1"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dotted_border_layout"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_margin60"
+                            android:layout_height="@dimen/size_margin60"
+                            android:layout_centerHorizontal="true"
+                            android:padding="4dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_lockscreen_glowdot"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:padding="@dimen/size_margin10"
+                                android:text="Marketing"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/size_tv_medium"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/titleTV"
+                                android:padding="4dp"
+                                android:textColor="@color/Ash_Gray"
+                                android:textSize="@dimen/size_tv_vsmall"
+                                android:visibility="gone"
+                                tools:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/marketingCountTV"
+                                android:layout_width="@dimen/size_margin50"
+                                android:layout_height="@dimen/size_margin50"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/size_margin20"
+                                android:background="@drawable/circle_bg"
+                                android:gravity="center"
+                                android:padding="@dimen/size_margin10"
+                                android:text="0"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/size_tv20"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/titleTV"
+                                android:padding="4dp"
+                                android:textColor="@color/Ash_Gray"
+                                android:textSize="@dimen/size_tv_vsmall"
+                                android:visibility="gone"
+                                tools:text="--" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <com.ncorti.slidetoact.SlideToActView
+                android:id="@+id/slideToNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_margin50"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_margin30"
+                android:layout_marginRight="@dimen/size_margin30"
+                android:layout_marginBottom="10dp"
+                android:elevation="6dp"
+                android:visibility="gone"
+                app:area_margin="4dp"
+                app:border_radius="30dp"
+                app:inner_color="@color/White"
+                app:outer_color="@color/colorPrimaryDark"
+                app:slider_height="@dimen/size_margin50"
+                app:slider_locked="false"
+                app:text="Next"
+                app:text_style="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

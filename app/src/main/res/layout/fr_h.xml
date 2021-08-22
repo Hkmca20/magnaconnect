@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/tool_com" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/logoutBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/size_margin5"
+            android:paddingLeft="@dimen/size_margin10"
+            android:paddingRight="@dimen/size_margin10"
+            android:text="Logout"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="@dimen/size_margin100"
+            android:layout_height="@dimen/size_margin100"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_margin20"
+            android:scaleType="fitXY"
+            android:src="@drawable/bt_plus_1080"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/background_toolbar_translucent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.magnaconnect.utils.CustomAutoCompleteTextView
+                android:id="@+id/act_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_margin10"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:dropDownHeight="wrap_content"
+                android:gravity="center_vertical"
+                android:hint="Search here by product name/model no/warranty etc."
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:maxLength="20"
+                android:minHeight="@dimen/size_margin50"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/size_tv_medium"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_Search"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:src="@android:drawable/ic_search_category_default" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/distributorContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchContainer"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/spinner_distributor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Select a dealer/distributor name*"
+                android:maxLength="32"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/distributorContainer"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="170dp"
+            android:divider="@color/Gray"
+            android:orientation="horizontal"
+            android:scrollbars="vertical"
+            android:scrollingCache="true"
+            android:smoothScrollbar="true"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/emptyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchContainer"
+            android:layout_marginBottom="@dimen/size_margin70"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/size_margin5"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/size_margin100"
+                android:layout_height="@dimen/size_margin100"
+                android:layout_marginTop="@dimen/size_margin20"
+                app:srcCompat="@drawable/ic_info200" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/size_margin10"
+                android:text="Empty content\nSearch product and add"
+                android:textColor="@color/Gray_Dolphin"
+                android:textSize="@dimen/size_tv_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_margin70"
+            android:padding="@dimen/size_margin5"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/commentET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dotted_border_layout"
+                android:gravity="top"
+                android:hint="please provide your comment here"
+                android:inputType="textMultiLine|text"
+                android:minWidth="@dimen/size_margin50"
+                android:minHeight="@dimen/size_margin90"
+                android:padding="@dimen/size_margin5"
+                android:textSize="@dimen/size_tv_medium"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <com.ncorti.slidetoact.SlideToActView
+            android:id="@+id/slideToNext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_margin50"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_margin30"
+            android:layout_marginRight="@dimen/size_margin30"
+            android:layout_marginBottom="10dp"
+            android:elevation="6dp"
+            android:visibility="gone"
+            app:area_margin="4dp"
+            app:border_radius="30dp"
+            app:inner_color="@color/White"
+            app:outer_color="@color/colorPrimaryDark"
+            app:slider_height="@dimen/size_margin50"
+            app:slider_locked="false"
+            app:text="SWIPE TO NEXT"
+            app:text_style="bold" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_margin40"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="@dimen/size_margin20"
+            android:layout_marginRight="@dimen/size_margin20"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Submit"
+            android:textSize="@dimen/size_tv18"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:minHeight="@dimen/size_margin50"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/barcodeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size_margin10"
+                android:text="barcode result"
+                android:textSize="@dimen/size_tv_small"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/scanButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/size_margin10"
+                android:padding="@dimen/size_margin10"
+                android:text="scan barcode"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

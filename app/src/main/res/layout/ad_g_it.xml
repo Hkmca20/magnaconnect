@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/White"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="@dimen/size_margin4"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/mSquareView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/size_margin100"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/S_No_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/size_margin20"
+                android:padding="5dp"
+                android:text="-"
+                android:textColor="@color/Ash_Gray"
+                android:textSize="@dimen/size_tv_vsmall"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iconIV"
+                android:layout_width="@dimen/size_margin60"
+                android:layout_height="@dimen/size_margin60"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_lockscreen_glowdot"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="--"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/size_tv_medium"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTV"
+                    android:padding="4dp"
+                    android:textColor="@color/Ash_Gray"
+                    android:textSize="@dimen/size_tv_vsmall"
+                    tools:text="--" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title1TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="--"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/size_tv_medium"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text1TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTV"
+                    android:padding="4dp"
+                    android:textColor="@color/Ash_Gray"
+                    android:textSize="@dimen/size_tv_vsmall"
+                    tools:text="--" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="4dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/Gray_Goose" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

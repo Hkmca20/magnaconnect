@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/tool_com" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/receiptContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/languageBTN"
+            style="@style/ThemeOverlay.MyTextDetailCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:theme="@style/ThemeOverlay.MyDarkButton"
+            android:visibility="gone"
+            tools:text="Language" />
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            tools:text="Template Title" />
+
+        <TextView
+            android:id="@+id/messageTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTV"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="70dp"
+            android:visibility="gone"
+            tools:text="template message" />
+
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="@dimen/size_margin100"
+            android:layout_height="@dimen/size_margin100"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_margin20"
+            android:scaleType="fitXY"
+            android:src="@drawable/bt_plus_1080"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoIV">
+
+            <LinearLayout
+                android:id="@+id/recyclerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_barcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/size_margin20"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/barcodeET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Barcode"
+                        android:padding="5dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/Gray_Goose"
+                        android:textSize="@dimen/size_tv28"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/size_margin20"
+                    android:layout_marginRight="20dp">
+
+                    <EditText
+                        android:id="@+id/modelNoET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="User Name"
+                        android:padding="5dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/Gray_Goose"
+                        android:textSize="@dimen/size_tv18" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/size_margin20"
+                    android:layout_marginRight="20dp">
+
+                    <EditText
+                        android:id="@+id/companyET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Module Name"
+                        android:padding="5dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/Gray_Goose"
+                        android:textSize="@dimen/size_tv18" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_warranty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/size_margin20"
+                    android:layout_marginRight="20dp">
+
+                    <EditText
+                        android:id="@+id/warrantyET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:padding="5dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/Gray_Goose"
+                        android:textSize="@dimen/size_tv18" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/size_margin20"
+                    android:layout_marginRight="20dp">
+
+                    <EditText
+                        android:id="@+id/otherET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tertiary award"
+                        android:padding="5dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/Gray_Goose"
+                        android:textSize="@dimen/size_tv18" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/cancelBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="BACK" />
+
+            <Button
+                android:id="@+id/submitBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="NEXT" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mSquareView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_shadow"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/size_margin5"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/S_No_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/size_margin20"
+        android:padding="5dp"
+        android:textColor="@color/Ash_Gray"
+        android:textSize="@dimen/size_tv_vsmall"
+        tools:text="-" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="4dp"
+            android:text="--"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/size_tv_small" />
+
+        <TextView
+            android:id="@+id/textTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTV"
+            android:padding="4dp"
+            android:textColor="@color/Ash_Gray"
+            android:textSize="@dimen/size_tv_vsmall"
+            tools:text="--" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/size_margin5">
+
+        <TextView
+            android:id="@+id/text1TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="@color/Ash_Gray"
+            android:textSize="@dimen/size_tv_vsmall"
+            tools:text="--" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="ADD"
+            android:textSize="@dimen/size_tv_medium" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "717547772247",
+    "project_id": "magnetic-5071b",
+    "storage_bucket": "magnetic-5071b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717547772247:android:cf70a38b25b64e6e4bc612",
+        "android_client_info": {
+          "package_name": "com.magnaconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717547772247-itv7dtc8n4h36ovedl11vksincb7d2ql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.magnaconnect",
+            "certificate_hash": "201c36a385d9a4b695f0144a82558a50c869daef"
+          }
+        },
+        {
+          "client_id": "717547772247-vehlijieqgmhq3u03umksqor1fp74nr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtAal7gaho93T1G7AO8-tZ7Ar9nAX83g0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717547772247-vehlijieqgmhq3u03umksqor1fp74nr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

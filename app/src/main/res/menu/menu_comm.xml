@@ -1,0 +1,177 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hw.com.client.MainActivity">
+    <item
+        android:id="@+id/ac_sea"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="100"
+        android:title="Search Report"
+        android:visible="false"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_info"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:orderInCategory="100"
+        android:title="INFO"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_orientation"
+        android:icon="@android:drawable/ic_menu_always_landscape_portrait"
+        android:orderInCategory="100"
+        android:title="CHANGE ORIENTATION"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/ac_sub"
+        android:icon="@android:drawable/ic_menu_send"
+        android:orderInCategory="100"
+        android:title="SUBMIT"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_notif"
+        android:icon="@android:drawable/stat_notify_error"
+        android:orderInCategory="100"
+        android:title="Notification"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_ch_loc"
+        android:icon="@android:drawable/btn_minus"
+        android:orderInCategory="100"
+        android:title="Change Location"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_rel"
+        android:icon="@drawable/ic_autorenew_white_24dp"
+        android:orderInCategory="100"
+        android:title="RELOAD"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_rel_e"
+        android:icon="@drawable/ic_autorenew_white_24dp"
+        android:orderInCategory="100"
+        android:title="RELOAD"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_rel_ed"
+        android:icon="@drawable/ic_autorenew_white_24dp"
+        android:orderInCategory="100"
+        android:title="RELOAD"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_reL_dl"
+        android:icon="@drawable/ic_autorenew_white_24dp"
+        android:orderInCategory="100"
+        android:title="RELOAD"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_rel_ep"
+        android:icon="@drawable/ic_autorenew_white_24dp"
+        android:orderInCategory="100"
+        android:title="RELOAD"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_rel1"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:orderInCategory="100"
+        android:title="RELOAD"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_type_i"
+        android:icon="@drawable/ic_more_vert"
+        android:orderInCategory="100"
+        android:title="All Types"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_type_t"
+        android:icon="@drawable/ic_more_vert"
+        android:orderInCategory="100"
+        android:title="All Types"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_att_his"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:iconTint="@color/White"
+        android:orderInCategory="100"
+        android:title="Attendance History"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_att_pu"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:iconTint="@color/White"
+        android:orderInCategory="100"
+        android:title="Attendance"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_rota"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:orderInCategory="100"
+        android:title="Rotate by 90 degree"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_sk_p"
+        android:icon="@android:drawable/ic_media_ff"
+        android:orderInCategory="100"
+        android:title="Skip Add Product"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_sk_c"
+        android:icon="@android:drawable/ic_media_ff"
+        android:orderInCategory="100"
+        android:title="Skip Add Counter"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_sk_m"
+        android:icon="@android:drawable/ic_media_ff"
+        android:orderInCategory="100"
+        android:title="Skip Add Marketing"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_ad"
+        android:icon="@android:drawable/ic_menu_add"
+        android:orderInCategory="100"
+        android:title="Add Dealer"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ac_don"
+        android:icon="@android:drawable/ic_menu_save"
+        android:orderInCategory="100"
+        android:title="Done"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/ac_the"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:orderInCategory="100"
+        android:title="Dark Theme"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/ac_ex"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:orderInCategory="100"
+        android:title="Logout"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+</menu>

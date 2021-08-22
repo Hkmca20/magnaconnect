@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_Admin"
+        android:title="Admin"
+        android:visible="false">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/ic_arrow_new"
+                    android:orderInCategory="100"
+                    android:title="LOGIN"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_change_password"
+                    android:icon="@drawable/ic_6_lock"
+                    android:orderInCategory="100"
+                    android:title="Change Password"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_inventory"
+                    android:icon="@drawable/ic_8_trend"
+                    android:orderInCategory="100"
+                    android:title="Inventory"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_revard"
+                    android:icon="@drawable/ic_5"
+                    android:orderInCategory="100"
+                    android:title="Reward"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_att_punch"
+                    android:icon="@android:drawable/gallery_thumb"
+                    android:iconTint="@color/Black"
+                    android:orderInCategory="100"
+                    android:title="Attendance"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_att_history"
+                    android:icon="@android:drawable/ic_menu_recent_history"
+                    android:iconTint="@color/Black"
+                    android:orderInCategory="100"
+                    android:title="Attendance Status"
+                    android:visible="false"
+                    app:showAsAction="always" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_2"
+        android:title="action 2"
+        android:visible="false">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_5"
+                    android:icon="@drawable/ic_block"
+                    android:orderInCategory="100"
+                    android:title="OPTION 5"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_6"
+                    android:icon="@drawable/ic_6_lock"
+                    android:orderInCategory="100"
+                    android:title="OPTION 6"
+                    android:visible="false"
+                    app:showAsAction="always" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_3"
+        android:title="action 3"
+        android:visible="false">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_7"
+                    android:icon="@drawable/ic_4"
+                    android:orderInCategory="100"
+                    android:title="Route Report"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_8"
+                    android:icon="@drawable/ic_arrow_new"
+                    android:orderInCategory="100"
+                    android:title="Runner Report"
+                    android:visible="false"
+                    app:showAsAction="always" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_4"
+        android:title="Other Option"
+        android:visible="true">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_share_app"
+                    android:icon="@drawable/ic_9_share"
+                    android:orderInCategory="100"
+                    android:title="Share BTSampark"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_term_and_cond"
+                    android:icon="@android:drawable/ic_menu_preferences"
+                    android:orderInCategory="100"
+                    android:title="Terms and Conditions"
+                    android:visible="false"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_10"
+                    android:icon="@drawable/ic_arrow_new"
+                    android:orderInCategory="100"
+                    android:title="OPTION 10"
+                    android:visible="false"
+                    app:showAsAction="always" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_2"
+        android:orderInCategory="100"
+        android:title="Logout"
+        android:visible="false"
+        app:showAsAction="always" />
+
+</menu>

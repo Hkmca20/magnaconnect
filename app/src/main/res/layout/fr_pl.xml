@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_2">
+
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="@dimen/size_margin80"
+            android:layout_height="@dimen/size_margin80"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_margin100"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_icon" />
+
+        <Button
+            android:id="@+id/gotoLoginBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoIV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_margin30"
+            android:paddingLeft="@dimen/size_margin40"
+            android:paddingRight="@dimen/size_margin40"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/gotoSignupBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gotoLoginBTN"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/size_margin20"
+            android:paddingLeft="@dimen/size_margin40"
+            android:paddingRight="@dimen/size_margin40"
+            android:text="Signup" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gotoSignupBTN"
+            android:layout_marginTop="@dimen/size_margin20"
+            android:gravity="center"
+            android:paddingLeft="@dimen/size_margin10"
+            android:paddingRight="@dimen/size_margin10"
+            android:text="To see all features,\nplease login/register."
+            android:textColor="@color/White"
+            android:textSize="@dimen/size_tv_small" />
+
+        <Button
+            android:id="@+id/skipBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/size_margin20"
+            android:background="@color/White"
+            android:paddingLeft="@dimen/size_margin10"
+            android:paddingRight="@dimen/size_margin10"
+            android:text="Skip"
+            android:textStyle="italic"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Magnaconnect</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_empty">Please enter your name.</string>
+    <string name="email_empty">Please enter your email.</string>
+    <string name="mobile_empty">Please enter your mobile number.</string>
+    <string name="password_empty">Please enter your password.</string>
+    <string name="confirm_password">Password and confirm password not same.</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+    <string name="SNACKBAR_MSG_TEXT_DISMISS">Wrong userid and password entered!</string>
+    <string name="SNACKBAR_BTN_TEXT_DISMISS">Dismiss</string>
+    <string name="internet_message">The Internet connection appears to be offline</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="OTPSentMessagePhone">One Time Password(OTP) has been sent to your registered mobile number.
+        OTP will be automatically detected. Please wait.</string>
+    <string name="text_current_scheme"><u>current scheme / prices</u></string>
+    <string name="other_link_1"><u>service Request</u></string>
+    <string name="other_link_2"><u>revalidation</u></string>
+    <string name="meeting_on">Meeting is going on...\n\n(please login next day)</string>
+    <string name="logout_msg">Logout successfully...\n\n(please login next day)</string>
+    <string name="location_permission">Location permission required to login,\nplease go to settings to enable location service.</string>
+    <string name="internet_not_connected">Internet not connected!</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="location_service_enable">Location Service not Enabled, please enable permission for location!</string>
+    <string name="check_connection">Please check your Internet connection!</string>
+    <string name="password_error">Password not matched, please try again!</string>
+    <string name="login_success">Login successful!</string>
+    <string name="message_back">Please press back again to exit.</string>
+    <string name="select_dist">Select a distributor name</string>
+    <string name="select_state">Select a state name</string>
+    <string name="select_type">Select a partner type</string>
+    <string name="attend_udpate">Your punch in data not found,\nPlease update status!</string>
+    <string name="cant_change">Can&quot;t change this field.</string>
+    <string name="uri_scheme">ussd</string>
+    <string name="uri_authority">cd</string>
+    <string name="uri_path">/</string>
+    <string name="uri_param_name">uval</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">Weather</string>
+
+    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
+    <string name="subscribe_to_weather">Subscribe To Weather</string>
+    <string name="log_token">Log Token</string>
+    <string name="msg_subscribed">Subscribed to weather topic</string>
+    <string name="fcm_message">FCM Message</string>
+    <string name="my_channel_name" >My channel name</string>
+</resources>

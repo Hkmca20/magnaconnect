@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/White"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/S_No_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/size_margin20"
+                android:padding="5dp"
+                android:text="-"
+                android:textColor="@color/Ash_Gray"
+                android:textSize="@dimen/size_tv_vsmall"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Name; "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/size_tv18"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTV"
+                    android:padding="5dp"
+                    android:textColor="@color/Ash_Gray"
+                    android:textSize="@dimen/size_tv_vsmall"
+                    tools:text="--" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title1TV"
+                    android:layout_width="@dimen/size_margin40"
+                    android:layout_height="@dimen/size_margin40"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_bg"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@drawable/button_text_color"
+                    android:textSize="@dimen/size_tv18"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text1TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTV"
+                    android:padding="10dp"
+                    android:textColor="@color/Ash_Gray"
+                    android:textSize="@dimen/size_tv_vsmall"
+                    tools:text="--" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/Gray_Goose" />
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/locationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ad_selectable_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/size_margin10">
+
+                <ImageView
+                    android:id="@+id/locationIV"
+                    android:layout_width="@dimen/size_margin50"
+                    android:layout_height="@dimen/size_margin50"
+                    android:layout_centerHorizontal="true"
+                    android:padding="4dp"
+                    android:scaleType="fitXY"
+                    android:tint="@color/selector_primary"
+                    android:visibility="visible"
+                    card_view:srcCompat="@drawable/ic_12_location" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/callLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ad_selectable_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/size_margin10">
+
+                <ImageView
+                    android:id="@+id/callIV"
+                    android:layout_width="@dimen/size_margin50"
+                    android:layout_height="@dimen/size_margin50"
+                    android:layout_centerHorizontal="true"
+                    android:padding="4dp"
+                    android:scaleType="fitXY"
+                    android:tint="@color/selector_primary"
+                    android:visibility="visible"
+                    card_view:srcCompat="@drawable/ic_13_call" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/mSquareView"
+            android:layout_width="4dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/Gray_Goose" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

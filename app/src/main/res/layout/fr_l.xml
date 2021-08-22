@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_2"
+    android:clickable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <include
+                    android:id="@+id/include"
+                    layout="@layout/tool_com" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/logoIV"
+                        android:layout_width="@dimen/size_margin100"
+                        android:layout_height="@dimen/size_margin100"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/size_margin20"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bt_plus_1080" />
+
+                    <LinearLayout
+                        android:id="@+id/Layout_Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/logoIV"
+                        android:layout_marginLeft="@dimen/size_margin20"
+                        android:layout_marginRight="@dimen/size_margin20"
+                        android:layout_marginBottom="60dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/titleTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="WELCOME"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/size_tv16"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:text="Enabling Doctor's and Laboratory to connect seamlessly."
+                            android:textSize="@dimen/size_tv_small"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Enter your mobile number and 6 digit password"
+                            android:textSize="@dimen/size_tv16"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/et_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:hint="Mobile Number"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp">
+
+                            <EditText
+                                android:id="@+id/et_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:drawablePadding="4dp"
+                                android:drawableTint="@color/colorPrimary"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:maxLength="16"
+                                android:maxLines="1"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textSize="@dimen/size_tv18"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/btn_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_margin40"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="20dp"
+                            android:layout_marginLeft="@dimen/size_margin20"
+                            android:layout_marginRight="@dimen/size_margin20"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:text="LOGIN"
+                            android:textSize="@dimen/size_tv18"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/rememberCB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="Remember Me"
+                                android:textSize="@dimen/size_tv_medium" />
+
+                            <TextView
+                                android:id="@+id/forgotTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                android:gravity="center_horizontal"
+                                android:text="Forgot Password!"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/size_tv_medium" />
+                        </LinearLayout>
+
+                        <!--<com.facebook.userLogin.widget.LoginButton-->
+                        <!--android:id="@+id/login_facebook"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="5"-->
+                        <!--android:paddingTop="15dp"-->
+                        <!--android:paddingBottom="15dp" />-->
+
+                        <TextView
+                            android:id="@+id/signupTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="New User? Sign Up"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/size_tv18"
+                            android:textStyle="italic"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

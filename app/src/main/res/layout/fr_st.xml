@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/bg_2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/tool_com" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/clockContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true">
+
+                    <AnalogClock
+                        android:id="@+id/analogClock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="@dimen/size_margin90"
+                        android:layout_height="@dimen/size_margin90"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/clockContainer"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="28dp">
+
+                    <ImageView
+                        android:id="@+id/logoIV"
+                        android:layout_width="@dimen/size_margin100"
+                        android:layout_height="@dimen/size_margin100"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/size_margin20"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bt_plus_1080"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/categoryTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Select a following category and proceed"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/categoryButton1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/size_margin20"
+                            android:layout_marginTop="@dimen/size_margin30"
+                            android:layout_marginRight="@dimen/size_margin20"
+                            android:minHeight="50dp"
+                            android:text="Employee"
+                            android:rotation="-3"
+                            android:textAllCaps="false"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/categoryButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/size_margin20"
+                            android:rotation="-3"
+                            android:layout_marginTop="@dimen/size_margin50"
+                            android:layout_marginRight="@dimen/size_margin20"
+                            android:minHeight="50dp"
+                            android:text="Business expert\n(Dealer)"
+                            android:textAllCaps="false"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/categoryButton3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/size_margin20"
+                            android:layout_marginTop="@dimen/size_margin50"
+                            android:layout_marginRight="@dimen/size_margin20"
+                            android:layout_marginBottom="@dimen/size_margin50"
+                            android:minHeight="50dp"
+                            android:rotation="-3"
+                            android:text="Business Partner"
+                            android:textAllCaps="false"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory
+        android:title="general">
+
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefs_notifications"
+            android:title="Enable Notifications"/>
+
+
+        <Preference
+            android:key="send_feedback"
+            android:summary="We appreciate your feedback. What did you like or dislike ?"
+            android:title="Send Feedback"/>
+
+        <Preference
+            android:key="version"
+            android:summary="version"
+            android:title="Version"/>
+
+        <Preference
+            android:key="copyright"
+            android:summary="UltimateAndroidTemplateRx © 2017 - forever. All rights reserved."
+            android:title="Copyright"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
