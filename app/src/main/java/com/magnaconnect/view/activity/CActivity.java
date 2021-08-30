@@ -11,6 +11,7 @@ import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.annotations.NotNull;
 import com.magnaconnect.BApp;
 import com.magnaconnect.R;
 import com.magnaconnect.services.MyJobService;
@@ -34,6 +36,11 @@ import com.magnaconnect.services.UploadWorker;
 import com.magnaconnect.view.fragment.FragmentCallback;
 import com.magnaconnect.view.fragment.SPFragment;
 import com.socks.library.KLog;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -45,6 +52,13 @@ import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 import androidx.work.WorkRequest;
 import butterknife.BindString;
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
 
 import static com.magnaconnect.utils.Utility.validateSession;
 
@@ -168,51 +182,7 @@ public class CActivity extends BActivity implements MainMvpView, FragmentCallbac
                 Log.d(TAG, msg);
             }
         });
-        //----------Job Service and Scheduler Task here----------
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            startingJobService();
-        }
-        startWorkManagerTask();
-
-        MyTestClass c1 = new MyTestClass();
-        MyTestClass c2 = new MyTestClass();
-        c1.display();c2.display();
-    }
-
-    private void startWorkManagerTask() {
-        WorkRequest uploadWorkRequest = new OneTimeWorkRequest.Builder(UploadWorker.class).build();
-        WorkManager.getInstance(activity).enqueue(uploadWorkRequest);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void startingJobService() {
-        ComponentName componentName = new ComponentName(BApp.appContext, MyJobService.class);
-
-//        PersistableBundle bundle = new PersistableBundle();
-//        bundle.putInt(JobFlags.KEY_PERIODIC_SYNC_JOB, JobFlags.JOB_TYPE_INITIAL_FETCH);
-        JobInfo jobInfo = new JobInfo.Builder(JOB_ID, componentName)
-//                .setExtras(bundle)
-//                .setPeriodic(3 * 60 * 1000)
-//                .setMinimumLatency(3 * 60 * 1000)
-                .setRequiresCharging(false)
-                .setPersisted(true)  // relaunch on reboot
-                .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
-                .setMinimumLatency(1)
-                .setOverrideDeadline(3 * 60 * 1000)
-                .build();
-        JobScheduler jobScheduler = (JobScheduler) BApp.appContext.getSystemService(Context.JOB_SCHEDULER_SERVICE);
-        int result = jobScheduler.schedule(jobInfo);
-
-/**     -----Other method to control jobs-----------------
- jobScheduler.cancel(JOB_ID);
-
- abstract void cancel(int jobId)
- abstract void cancelAll()
- abstract int enqueue(JobInfo job, JobWorkItem work)
- abstract List<JobInfo> getAllPendingJobs()
- abstract JobInfo getPendingJob(int jobId)
- abstract int schedule(JobInfo job)
- */
+        startActivity(new Intent(activity, ExampleActivity.class));
     }
 
     public void setFragment(Fragment fragment) {
